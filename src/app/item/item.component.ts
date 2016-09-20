@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'my-item',
-  templateUrl: './item.component.html'
+  templateUrl: './item.component.html',
+  encapsulation: ViewEncapsulation.Native,
+  styleUrls: ['./item.component.css']
 })
 export class ItemComponent {
   name:string;

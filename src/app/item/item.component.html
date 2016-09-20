@@ -1,3 +1,4 @@
 <div>
-  <span (click)="onClick()"><ng-content></ng-content>{{name}}</span>
+  <p><input [(ngModel)]="name" /></p>
+  <p><span (click)="onClick()"><ng-content></ng-content>{{name}}</span></p>
 </div>
