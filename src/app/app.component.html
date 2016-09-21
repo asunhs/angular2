@@ -1,8 +1,15 @@
 <main>
-    <h1>Hello from Angular 2 App with Webpack</h1>
-    <my-item>
-      <span class="name">Name is </span>
-      <span class="fetch">Fetch is </span>
-      <span class="ob">Observe is </span>
+    <h1 (click)="onClick()">Hello from Angular 2 App with Webpack</h1>
+    <my-item name="Yoon">
+        <span class="name">Name is </span>
+        <span class="fetch">Fetch is </span>
+        <span class="ob">Observe is </span>
+    </my-item>
+
+    <h1 (click)="onClick(sun)">Hello from Angular 2 App with Webpack</h1>
+    <my-item name="Sun" #sun>
+        <span class="name">Name is </span>
+        <span class="fetch">Fetch is </span>
+        <span class="ob">Observe is </span>
     </my-item>
 </main>

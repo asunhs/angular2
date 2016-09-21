@@ -1,6 +1,6 @@
 <div>
   <p><input [(ngModel)]="name" /></p>
-  <p><span (click)="onClick()"><ng-content select=".name"></ng-content>{{name | upper}}</span></p>
+  <p><span><ng-content select=".name"></ng-content>{{name | upper}}</span></p>
   <p><span><ng-content select=".fetch"></ng-content>{{fetchName | async | upper}}</span></p>
   <p><span><ng-content select=".ob"></ng-content>{{obName | async | upper}}</span></p>
 </div>

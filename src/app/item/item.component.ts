@@ -1,6 +1,7 @@
 import {
   Component,
   ViewEncapsulation,
+  Input,
   OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs/Observable';
@@ -13,12 +14,11 @@ import { Observer } from 'rxjs/Observer';
   styleUrls: ['./item.component.css']
 })
 export class ItemComponent implements OnInit {
-  name: string;
+  @Input() name: string;
   fetchName: Promise<string>;
   obName: Observable<string>;
 
   constructor() {
-    this.name = 'Sun';
     this.fetchName = new Promise((resolve, reject) => {
       setTimeout(() => resolve('Sun'), 1000);
     });
