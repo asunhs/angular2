@@ -1,4 +1,8 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  ViewEncapsulation,
+  OnInit } from '@angular/core';
+
 import { Observable } from 'rxjs/Observable';
 import { Observer } from 'rxjs/Observer';
 
@@ -8,7 +12,7 @@ import { Observer } from 'rxjs/Observer';
   encapsulation: ViewEncapsulation.Native,
   styleUrls: ['./item.component.css']
 })
-export class ItemComponent {
+export class ItemComponent implements OnInit {
   name: string;
   fetchName: Promise<string>;
   obName: Observable<string>;
@@ -22,6 +26,12 @@ export class ItemComponent {
       observer.next("Sun");
       setInterval(() => { observer.next("Kim"); }, 1000);
     });
+  }
+
+  ngOnInit() {
+    setTimeout(() => {
+      this.name = 'Kim';
+    }, 2000);
   }
 
   onClick() {
