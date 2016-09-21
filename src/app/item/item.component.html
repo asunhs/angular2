@@ -1,4 +1,4 @@
 <div>
   <p><input [(ngModel)]="name" /></p>
-  <p><span (click)="onClick()"><ng-content></ng-content>{{name}}</span></p>
+  <p><span (click)="onClick()"><ng-content></ng-content>{{obName | async | upper}}</span></p>
 </div>
